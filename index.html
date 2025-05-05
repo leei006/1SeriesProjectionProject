@@ -1,52 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projection</title>
-    <link rel="stylesheet" href="index.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projection</title>
+  <link rel="stylesheet" href="index.css" />
 </head>
 <body>
+ <button id="toggleBlend" class="blend-toggle">On/Off</button>
+ <div class="side-paragraph">
+    <p>
+    <span id="title">A Photographic Study of Projection and Distortion</span><br><br>
+      This project explores the distortion of projected imagery, examining how a machine sees, transforms, and reflects images. Through iterative feedback loops and material tests, the projector becomes both the subject and the tool.
+      <br><br>
+      Study by Isabel Yeajin Lee
+      <br> ©IYL
+    </p>
+  </div>
+    <div class="center-circle"></div>
+  
     <div class="scroll-container">
-        <!-- Video Element with hover text -->
-        <div class="image-container">
-            <video class="video" src="img/Video1.mp4" autoplay loop muted playsinline></video>
-            <div class="hover-text">Your Custom Text for the Video</div>
-        </div>
-
-        <!-- Image Elements with hover text -->
-        <div class="image-container">
-            <img src="img/01Series.png" alt="">
-            <div class="hover-text">Custom Text for Image 1</div>
-        </div>
-        <div class="image-container">
-            <img src="img/01Series2.png" alt="">
-            <div class="hover-text">Custom Text for Image 2</div>
-        </div>
-        <div class="image-container">
-            <img src="img/01Series3.png" alt="">
-            <div class="hover-text">Custom Text for Image 3</div>
-        </div>
-        <div class="image-container">
-            <img src="img/01Series4.png" alt="">
-            <div class="hover-text">Custom Text for Image 4</div>
-        </div>
-        <div class="image-container">
-            <img src="img/01Series5.png" alt="">
-            <div class="hover-text">Custom Text for Image 5</div>
-        </div>
-        <div class="image-container">
-            <img src="img/01Series6.png" alt="">
-            <div class="hover-text">Custom Text for Image 6</div>
-        </div>
-        <div class="image-container">
-            <img src="img/01Series7.png" alt="">
-            <div class="hover-text">Custom Text for Image 7</div>
-        </div>
-        <div class="image-container">
-            <img src="img/01Series8.png" alt="">
-            <div class="hover-text">Custom Text for Image 8</div>
-        </div>
+      <div class="image-container">
+        <video class="video" src="img/Video1.mp4" autoplay loop muted playsinline></video>
+        <!-- <div class="hover-text">A Photographic Study of Projection and Distortion</div> -->
+        <div class="bottom-text">This video captures the inner workings of the projector and its distortions.</div>
+      </div>
+  
+      <div class="image-container">
+        <img id="setup" src="img/IMG_6383.jpeg" alt="">
+        <div class="hover-text">The purpose of this project is to investigate the projector and examine its internal system.</div>
+      </div>
+      <div class="image-container">
+        <img src="img/01Series.png" alt="">
+        <div class="hover-text">Looking directly into a projector lens is impossible for the human eye because of its intense brightness.</div>
+        <div class="bottom-text">Experiment 1</div>
+      </div>
+      <div class="image-container">
+        <img src="img/01Series2.png" alt="">
+        <div class="hover-text">In experiment 1 the exposure of the white background was too bright for the projector to register the image. To combat this I made the image black and white.</div>
+      </div>
+      <div class="image-container">
+        <img src="img/01Series3.png" alt="">
+        <div class="hover-text">When we peer through the lense, we see a reflection of our image.The projector is a system of mirrors.</div>
+      </div>
+      <div class="image-container">
+        <img src="img/01Series4.png" alt="">
+        <div class="hover-text">What occurs when an image is fed back into the projector from within its own system?</div>
+      </div>
+      <div class="image-container">
+        <img src="img/01Series5.png" alt="">
+        <div class="hover-text">It becomes unclear, unrecognizable.</div>
+      </div>
+      <div class="image-container">
+        <img src="img/01Series6.png" alt="">
+        <div class="hover-text">Almost as if the projector is unwinding itself.</div>
+      </div>
+      <div class="image-container">
+        <img src="img/01Series7.png" alt="">
+        <div class="hover-text">As I feed the projector the same image over and over it begins to reveal another layer.</div>
+      </div>
+      <div class="image-container">
+        <img src="img/01Series8.png" alt="">
+        <div class="hover-text">The more distorted the image grows the more I can see the frame of the lense. Where we can no longer see the image, the machine presents itself. </div>
+      </div>
+      <div class="image-container">
+        <img src="img/02Series.png" alt="">
+        <div class="hover-text">This experimentation was a series. In different stages I worked with color, size, and surface area of the projection.</div>
+        <div class="bottom-text">Experiment 2</div>
+      </div>
+      <div class="image-container">
+        <img src="img/02Series2.png" alt="">
+        <div class="hover-text">In experiment 2 I wanted to investigate the effect of color on the image. <br> Now the projection is white on black.</div>
+      </div>
+      <div class="image-container">
+        <img src="img/02Series3.png" alt="">
+        <div class="hover-text">Now we are able to see these waves and rings of light.</div>
+      </div>
+      <div class="image-container">
+        <img src="img/02Series4.png" alt="">
+        <div class="hover-text">Just like the end stages of experiment one the lens comes back into view.</div>
+      </div>
+      <div class="image-container">
+        <img src="img/02Series5.png" alt="">
+        <div class="hover-text">In the furthest stage of this experiment the letter "A" is blown out beyond legibility.</div>
+      </div>
     </div>
+  
+    
+    <script>
+      const toggleButton = document.getElementById('toggleBlend');
+      const centerCircle = document.querySelector('.center-circle');
+  
+      toggleButton.addEventListener('click', () => {
+        centerCircle.classList.toggle('no-blend');
+      });
+
+      const sideParagraph = document.querySelector('.side-paragraph');
+
+window.addEventListener('scroll', () => {
+  sideParagraph.classList.add('hidden');
+}, { once: true }); 
+    </script>
+  
 </body>
 </html>
