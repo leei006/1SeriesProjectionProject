@@ -12,6 +12,14 @@ html, body {
   height: 100vh;
   overflow: hidden;
   background: black;
+
+  /* Moved mask here */
+  -webkit-mask-image: radial-gradient(circle at center, black 50%, transparent 51%);
+  mask-image: radial-gradient(circle at center, black 50%, transparent 51%);
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
 }
 
 .scrollable-content {
@@ -23,22 +31,14 @@ html, body {
   flex-direction: column;
   align-items: center;
   gap: 19rem;
-  padding: 15rem;
+  padding: 10rem 5rem; /* Top/bottom, Left/right */
   box-sizing: border-box;
-
-  /* Apply the circular mask here */
-  -webkit-mask-image: radial-gradient(circle, black 50%, transparent 51%);
-  mask-image: radial-gradient(circle, black 50%, transparent 51%);
-  -webkit-mask-size: 100% 100%;
-  mask-size: 100% 100%;
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
 }
 
 .scrollable-content video,
 .scrollable-content img {
-  max-width: 130vmin;
-  max-height: 130vmin;
+  max-width: 170vmin;
+  max-height: 170vmin;
   width: auto;
   height: auto;
   object-fit: cover;
